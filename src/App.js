@@ -6,19 +6,13 @@ function App() {
   const [author, setAuthor] = useState('');
 
   useEffect(() => {
-    fetch('https://cors-anywhere.herokuapp.com/http://api.quotable.io/random')
-      .then((res) => res.json())
-      .then((data) => {
-        setQuote(data.content);
-        setAuthor(data.author);
-      })
-      .catch((error) => {
-        console.error('Error fetching quote:', error);
-      });
+    fetchQuote();
   }, []);
 
-  const fetchNewQuote = () => {
-    fetch('https://cors-anywhere.herokuapp.com/http://api.quotable.io/random')
+  const fetchQuote = () => {
+    const apiUrl = 'https://api.quotable.io/random';
+
+    fetch(apiUrl)
       .then((res) => res.json())
       .then((data) => {
         setQuote(data.content);
@@ -36,7 +30,7 @@ function App() {
         <small>-{author}-</small>
       </div>
       <br />
-      <button className="btn" onClick={fetchNewQuote}>
+      <button className="btn" onClick={fetchQuote}>
         Generate New Quote
       </button>
     </div>
