@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/RandomQuote-React/static/css/main.0b0aef59.css",
+    "main.js": "/RandomQuote-React/static/js/main.dd511df1.js",
+    "static/media/bg.jpg": "/RandomQuote-React/static/media/bg.e80e936b0039a2d8ea8d.jpg",
+    "index.html": "/RandomQuote-React/index.html",
+    "main.0b0aef59.css.map": "/RandomQuote-React/static/css/main.0b0aef59.css.map",
+    "main.dd511df1.js.map": "/RandomQuote-React/static/js/main.dd511df1.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.0b0aef59.css",
+    "static/js/main.dd511df1.js"
+  ]
+}
