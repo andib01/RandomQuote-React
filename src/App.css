@@ -1,54 +1,54 @@
-@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Lobster&display=swap');
-
-.App {
-  display: flex;
-  justify-content: center;
-  min-height: 100vh;
-  align-items: center;
-  flex-direction: column;
-  background-color: brown
-}
-.quote {
-  background: url(./assets/bg.jpg);
-  background-size: cover;
-  width: 500px;
-  height: 350px;
-  border-radius: 10px;
-  padding: 50px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-
-}
-.quote h2 {
-  font-size: 2em;
-  font-family: 'Lobster', cursive;
-}
-.quote small {
-  font-size: 2em;
-  font-family: 'Dancing Script', cursive;
-}
-
-.btn {
-	display: block;
-	border: 2px solid #008CBA;
-	background: transparent;
-	padding: 10px 15px;
-	color: #008CBA;
-	font-size: 20px;
-	border-radius: 5px;
-	cursor: pointer;
-	outline: none;
-	transition: background 1s, color 1s;
-}
-.btn:hover{
-  background: #008CBA;
-	color: #fff;
-	box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
-}
-
-html, body {
-  margin: 0;
+*{
   padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+.app{
+  background-image: url('./background.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.quote-container{
+  text-align: center;
+  background-color: rgb(38, 35, 75);
+  border-radius: 500px;
+  padding: 20px;
+  width: 60%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  box-shadow: 10px 12px 10px 0px rgb(0 0 0 / 50%);
+  border: 3px solid #D4AF37;
+}
+
+.quote-container p {
+  font-size: 2.5rem;
+  font-style: italic;
+  margin-bottom: 20px;
+}
+
+.quote-container button{
+  padding: 15px;
+  cursor: pointer;
+  width: 200px;
+  font-size: 16px;
+  margin-bottom: 20px;
+  outline: none;
+  border-radius: 5px;
+  border: 1px solid rgba(22, 170, 22, 0.5);
+  transition: all 200ms ease-in;
+}
+
+.quote-container button:hover{
+  background-color: #D4AF37;
+  color: white;
 }

@@ -1,38 +1,31 @@
-import React, { useState, useEffect } from 'react';
 import './App.css';
+import { useEffect, useState } from 'react'
+
 
 function App() {
   const [quote, setQuote] = useState('');
-  const [author, setAuthor] = useState('');
+  const [isLoading, setIsLoading] = useState(true);
+
+  const fetchQuote = async () => {
+    const res = await fetch(`https://type.fit/api/quotes`);
+    const data = await res.json();
+    const randomNumber = Math.floor(Math.random() * data.length);
+    setQuote(data[randomNumber].text)
+    setIsLoading(false);
+  }
 
   useEffect(() => {
     fetchQuote();
-  }, []);
+  }, [])
 
-  const fetchQuote = () => {
-    const apiUrl = 'https://api.quotable.io/random';
-
-    fetch(apiUrl)
-      .then((res) => res.json())
-      .then((data) => {
-        setQuote(data.content);
-        setAuthor(data.author);
-      })
-      .catch((error) => {
-        console.error('Error fetching quote:', error);
-      });
-  };
 
   return (
-    <div className="App">
-      <div className="quote">
-        <h2>{quote}</h2>
-        <small>-{author}-</small>
+    <div className="app">
+      <div className="quote-container">
+        {isLoading && <p>Loading ...</p>}
+        <p>{quote}</p>
+        <button onClick={fetchQuote}>Random Quote</button>
       </div>
-      <br />
-      <button className="btn" onClick={fetchQuote}>
-        Generate New Quote
-      </button>
     </div>
   );
 }
