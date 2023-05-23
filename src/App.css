@@ -27,7 +27,7 @@
   align-items: center;
   flex-direction: column;
   box-shadow: 10px 12px 10px 0px rgb(0 0 0 / 50%);
-  border: 3px solid #D4AF37;
+  border: 3px solid #0f0d05;
 }
 
 .quote-container p {
@@ -49,6 +49,23 @@
 }
 
 .quote-container button:hover{
-  background-color: #D4AF37;
-  color: white;
+  background-color: #a622b8;
+  color: rgb(2, 97, 121);
+}
+
+/* Media query for responsive layout */
+@media (max-width: 480px) {
+  .quote-container {
+    width: 80%;
+    padding: 10px;
+  }
+  
+  .quote-container p {
+    font-size: 1.8rem;
+  }
+  
+  .quote-container button {
+    width: 150px;
+    font-size: 14px;
+  }
 }
