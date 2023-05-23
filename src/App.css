@@ -53,19 +53,9 @@
   color: rgb(2, 97, 121);
 }
 
-/* Media query for responsive layout */
+/* Adjust font size for smaller screens */
 @media (max-width: 480px) {
-  .quote-container {
-    width: 80%;
-    padding: 10px;
-  }
-  
   .quote-container p {
-    font-size: 1.8rem;
-  }
-  
-  .quote-container button {
-    width: 150px;
-    font-size: 14px;
+    font-size: calc(2.5rem - 0.2vw); /* Adjust the calculation as needed */
   }
 }
